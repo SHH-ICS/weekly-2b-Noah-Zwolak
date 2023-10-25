@@ -1,3 +1,5 @@
+Copy and pasted from rasberry pi server
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,18 +9,19 @@
     <title>Welcome Page</title>
   </head>
 
-  <body>
-    
+<body style="background-color: lightblue;">
     <?php
-    $userName = "";
-    if ( isset( $_POST['radius'] ) ){
-      $radius = $_POST['radius'];
-    }
-    echo "<h1>For a Circle of Radius ".$radius."</h1>\n";
-    echo "<p>Area = \n";
-    echo "<p>Circumference = \n";
+$radius = ""; if ( isset( $_POST['radius'] ) ){ $radius = $_POST['radius']; }
+    echo "<h1 style=text-align:center>When r= ".$radius." </h1>";
     ?>
-    
+<p style="text-align:center">
+<?php
+$a=$radius*$radius*3.14;
+echo $a;
+
+$cir=$radius*2*3.14;
+echo $cir;
+?>
+</p>
   </body>
-  
 </html>
